@@ -93,6 +93,8 @@ What is Collection?
 	How can you create thread safe collections?
 	What is Comparable and what is Comparator?
       HashSet and TreeSet differences?
+Marker interfaces?
+Functional Interfaces?
 
 
 ==================Spring Core=======================
