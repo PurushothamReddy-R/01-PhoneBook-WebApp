@@ -1,0 +1,275 @@
+================Code snippets=============================
+What is output of below program?[At line 7 error: variable i might already have been initialized]
+public class MyClass
+ {
+	 public static void main(String[] args) {
+	 	 final int i;
+		 i = 20;
+		 int j = i+20;
+		 i = j+30;
+	     System.out.println(i + " " + j);
+	 }
+ }
+
+
+==================Core Java Programs=======================
+Write a Java program to find second largest element in an array of integers?
+42, 15, 12, 8, 6, 32
+
+Write a Java program to count occurrences of each element in an array?
+4, 5, 4, 5, 4, 6
+
+Write a program create a HashMap, Insert data into it and retrieve the data from HashMap?
+
+=====================Core Java======================
+What is byte code?
+	Is byte code plaform independent? Yes
+What is JVM?
+	Is JVM platform independent? No
+What are the different OOPS principles?
+What is the diffrence between instance data memebers and static data members?
+What is method overloading?
+What is method overiding?
+What is Wrapper class in Java?
+What is Singleton class?
+What is Auto Boxing?
+What is Auto Unboxing?
+Where can we use final keyword?
+What is local variable and global variable?
+What is data encapsulation?
+What is data abstraction?
+Difference between equals() and == operator?(equals method is for content comparision. == is for memory address comparison)
+Can we Overload the main method? Yes
+What is final, finally and finalize?
+Can we overload static methods? Yes
+Can we override the static methods? No(Overriding happens at run time but static methods will be executed by compile time itself)
+What is garbage collector?
+What is Class loader?
+What is Shallow Copy?(The shallow copy only creates a new reference and points to the same object, We will just assign old object to the new reference)
+What is Deep Copy?(In a deep copy, we create a new object and copy the old object value to the new object)
+Can we make abstract class as final? No
+Can we override static as well as private method? No
+Java works as “pass by value” or “pass by reference” ? pass by value
+Which among String or String Buffer should be preferred when there are lot of updates required to be done in the data? String Buffer(because it is mutable)
+What is transient keyword? (transient fields will not participate in serialization)
+If we change main method signature whether the class will execute? (No. We will get NoSuchMethodError) 
+Access modifiers?
+	Class level(public, abstract, final)
+	Datamembers level(public, protected, private)
+Can we make a class as private?(Nested class can be private but not Top class)
+What is an abstract method?
+	What is an abstract class?
+What is interface?(public abstract methods, public static final data members)
+	What is default keyword which we use in interfaces?
+
+Difference between String and String Buffer?
+	What is String constant pool?
+String, String Builder(Non-synchronized)
+StringBuffer(Synchronized)
+
+What is Inheritance?
+	Whether Java supports multiple inheritance?
+	When we need to use extends keyword and
+	When to use implements keyword
+	What super keyword?
+	What is this keyword?
+What is Exception?
+	Types of Exceptions?
+		Checked Exceptions(java.lang.Exception, FileNotFoundException, ClassNotFoundException, IOException)
+		Unchecked Exceptions(java.lang.RuntimeException, ArithmeticException, NumberFormatException,ArrayIndexOutOfBoundsException)
+		Can we write a single try block and multiple catch blocks?
+		How can we stop executing finally block?(System.exit(), Fatal errors like StackOverFlowError, MemoryAccessError etc)
+
+What is Thread?
+	What is the purpose of multithreading?
+	How can you develop multithreading application in Java?(By using java.lang.Thread calss and java.lang.Runnable interface)
+	What is synchronization? How can we achieve it in java?(By using synchronized methods and blocks)
+What are generics?(Used to provide type safety to the collection object)
+What is Collection?
+	What are the different interfaces available in CFW?(Collection, List, Set, Sorted Set, Navigable Set, Queue, Map, Sorted Map, Navigable Map)
+	What are the different classes available in CFW?(ArrayList, LinkedList, HashSet, TreeSet, HashMap, TreeMap)
+	What are the different cursors available in CFW?(Enumerator, Iterator, ListIterator)
+	Are collections thread safe?
+	How can you create thread safe collections?
+	What is Comparable and what is Comparator?
+      HashSet and TreeSet differences?
+
+
+==================Spring Core=======================
+What is Spring?
+What are the different modules available in Spring?(IOC, AOP, MVC, ORM)
+What is IOC?((BeanFactory, ApplicationContext)Interfaces, (XMLBeanFactory, ClassPathXMLApplicationContext)Implementation classes)
+What is Dependency Injection?(Field, Setter, Constructor Injection)
+What is Autowiring?(byType, byName, Constructor)
+What is @Qualifier?
+What is Spring bean? Bean is an object in Spring that is managed by the Spring IoC Container
+What are the different scopes of a bean?
+	singleton(Only one object per IOC container)
+	prototype
+	request
+	session
+	global-session
+==================Spring MVC=======================
+Spring MVC architecture?(DispatcherServlet, HandlerMapper, Controller, ModelAndView, ViewResolver, View)
+What is Front Controller?
+What is @ModelAttribute?
+	At method level(The method which is annotated with @ModelAttribute will be executed for every request before executing the handler method)
+	As parameter(It binds a method parameter or a method return value to a named model attribute and then exposes it to a web view.)
+What is the use of @RequestBody?(It is used to bind HTTP request body to the java object, Internal HTTP message converters takes care of it)
+What is the use of @ResponseBody?(It is used to write a method return data directly into HTTP response body)
+What is ModelAndView?
+How to access model data in view file?${key}
+What’s the Difference Between @Controller, @Component, @Repository, and @Service Annotations in Spring?
+What Is a MultipartResolver and When Should We Use It?(File uploading)
+What are the different annotations which are available in spring framework?
+
+@Bean(method level annotation)
+@Configuration
+@Component
+@Autowired
+@Scope
+
+@Controller
+@Service
+@Repository
+@Transactional
+@RequestMapping
+@PathVariable
+@RequestParam
+@ModelAttribute
+@SessionAttributes
+
+
+@PreAuthorize
+@PostAuthorize
+
+==================JPA and Hibernate=======================
+JPA(javax.persistence)
+	EntityManagerFactory
+	EntityManager(Using it we can perform CRUD operations)(persist(), merge(), find(), remove())
+Hibernate(org.hibernate)
+	SessionFactory
+	Session(Using it we can perform CRUD operations)(save(), update(), saveOrUpdate(), persist(), merge(), get(), load(), delete())
+
+Hibernate
+	SessionFactory
+	Session(Using it we can perform CRUD operations)
+	Transaction
+	Query
+	Criteria
+@Entity, @Table, @Id, @Column
+What is dialect and why it is used?(org.hibernate.dialect.OracleDialect)(It is used to convert HQL queries to equivalent data base specific SQL queries)
+What is OneToMany mapping? How can you do that?(@OneToMany(cascade = CascadeType.ALL) @JoinColumn(name="qid"))
+What is cascade all in Hibernate?(Operation performed on parent table will be reflected to its child tables)
+fetch = FetchType.LAZY ? What is it?(To load the mapped child object only when we try to retieve that child object from the parent object)
+=====================Spring Data JPA========================
+CrudRepositiory(crud operations)
+JPARepository(crud operations+pagination+sorting)
+save(), saveAll(), findById(), findAll(),deleteById(), deleteAll(), count() etc
+
+@Query(To write custom queries)
+
+What is pagination? How can you perform it in spring data jpa?
+PageRequest.of(pageNo, pageSize)
+findAll(pageRequest)
+findAll(Sort.by("name").ascending)
+=====================Spring Boot========================
+What is Spring Boot?
+Advantages of Spring Boot?(Starts IOC, Component Scanning, Embedded database, Embedded server, Auto configuaration(DispatcherServlet, HandlerMaper, 							ViewResolver))
+
+@SpringBootApplication
+	@SpringBootConfiguration+@EnableAutoConfiguration+@ComponentScan
+Runners(To execute something for 1 time once the application bootstraping is completed. Ex: Loading data to cache)
+	ApplicationRunner
+	CommandLineRunner
+
+What is devtools dependency?
+What is profiles in Spring Boot?
+
+spring-boot-starter(AnnotationConfigApplicationContext)
+spring-boot-starter-web(AnnotationConfigServletWebServerApplicationContext)
+spring-boot-starter-webflux(AnnotationConfigReactiveWebServerApplicationContext)
+spring-boot-starter-datajpa
+
+Actuators(health, info, beans, heapDump, threadDump etc)
+Admin server(Provides UI to monitor and manage Rest APIs)
+
+Service Registry(Netflix Eureka)
+API Gateway(Zuul Proxy)
+Inter-Service Communication(FeignClient)
+ConfigServer(We will place configuration details in GIT repo)
+Client side load balancing(Ribbon)
+Circuit breaker(Netflix Hystrix)
+Distributed Logging(Sleuth & Zipkin)
+Cache(Redis)
+Stream processing(Apache Kafka)
+Containerization(Docker)
+
+How to deploy SpringBoot application to external server?(By generating a war file)
+=====================Spring REST========================
+What is distributed application?
+What is interoperability?
+What is rest resource and rest client?
+
+@RestController
+@GetMapping
+@PostMapping
+@PutMapping
+@Deletemapping
+
+@RequestParam
+@PathVariable
+
+How to return response in multiple formats?
+	API Side: produces, consumes
+	Client Side: accept, content-type
+
+What is ResponseEntity<>?(It is used to configure HTTP response(status, headers and body))
+
+How to develop rest client in Spring?
+	RestTemplate
+	WebClient
+
+JSON
+JACKSON(json->obj, obj->json)
+JAX-B(xml->obj, obj->xml)
+
+JAX-RPC(Apache axis, Oracle weblogic, IBM websphere)
+JAX-WS(Provider, Consumer, WSDL, UDDI, SOAP XML as request and response data) (Apache axis2, Oracle weblogic, IBM websphere)
+JAX-RS(Resource, Client, Swagger Documentation, JSON/XML/TEXT etc as request and response data)(Jersey, Rest easy)
+
+==================SQL=======================
+What is RDBMS?
+What is SQL?
+
+DDL(create, alter, rename, drop, truncate)
+DML(insert, update, delete)
+DCL(grant, revoke)
+TCL(commit, roll back, save point)
+DRL(select(all, projection, join))
+
+What are Constraints in SQL?(Not null, Primary key, Unique, Foreign key)
+What is a Primary Key?
+What is a UNIQUE constraint?
+What is a Foreign Key?
+
+What is a Join? What are the different types?(Inner, (Left Outer, Right Outer, Full Outer))
+
+What are the DELETE, TRUNCATE and DROP statements?
+	Delete to delete rows from a table
+      Truncate to delete all the rows from a table
+	Drop to delete an objet from the database
+ 
+What are the different types of relationships in SQL?(one-to-one, one-to-many, many-to-one, many-to-many)
+What is transaction in database?
+What is projection? Retrieving specific columns by mentioning column names in sql query
+What is selection? Retrieving specific rows by using where condition
+Do you know about views in the database? Also called as virtual table, Logical representation of physical data, Read only view of one physical table
+What is sequence in database? It is used to generate sequence of unique integers
+How can you generate a sequence in database? create sequence seq-name start with 1 increment by 1;
+Can you write create table syntax? create table table-name(column-name1 datatype1, column-name2 datatype2);
+Can you write insert data into table syntax? insert into table-name (col1, col2) values(val1, val2);
+Let's assume we have an employee table we need retrieve the data order by name, Write query for it? select * from employee order by name
+What is like operator in SQL?
+
+
