@@ -1,0 +1,31 @@
+RFDS Plumbing Design:
+Plumbing design is a diagram that shows the connections between different equipments which we use in a cell tower in telecom.
+We have raw atoll data.
+By using that raw atoll data RF engineers was manually designing plumbing diagrams.
+It was taking a lot of time to manually design those plumbing diagrams.
+As a solution to it we have automated the plumbing design process.
+It is greatly reducing the man hours it was taking earlier to design a plumbing.
+Our plumbing tool is capable to design plumbing diagrams on a single click and giving a lot of value to the RF Engineers.
+
+
+SQDB CBAND Capacity analytics:
+We have RAN Map screen, In this screen we can search for address.
+Based on the address, we are displaying the sites and sectors available in that address on map screen.
+Each sector is having attributes like RAN Used Capacity, EBH Util, EBH Deficiency etc
+We may have thousands of sectors and it is really difficult to group the sectors and identifying RAN Used Capacity, EBH Util, EBH Deficiency etc
+As a solution we have implemented few graphs that will clearly describes many insights of data.
+We have developed below 4 graphs that gives a lot of value to the users:
+1) Orders Trend - It will display a trend line chart for Activated Count and Connected Count.
+2) OFS vs Orders vs Capacity - It will display a bar graph that shows difference between OFS count, Order Count and Capacity
+3) Utilization(RAN Used Capacity, EBH Util, EBH Deficiency) - It will display how many sectors has used RAN Used Capacity, EBH Util, EBH Deficiency in between 0-10%, 10-20%, 20-30% ........ 90-100%
+4) OFS vs Markets & Sites - It will display each market and each site with it's OFS count
+
+
+
+H3 grids on RAN Map screen:
+Uber has introduced H3 grid system.
+This grid system is partitioning areas of the Earth into identifiable grid cells.
+Each cell will have some hex code.
+Based on that hex code we can find the exact location on the map and boundaries of it.
+This grid system is very help full to analyze large spatial data sets.
+So we have integrated these hex grids with RAN Map.
